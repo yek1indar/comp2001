@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    .header{
+        display: flex;
+    }
+
+    .result{
+        padding-top: 30px;
+        padding-left: 140px;
+        width: 620px;
+
+    }
+
+    .paginaton{
+        padding-left: 140px;
+        padding-top: 20px;
+        background-color: rgb(232, 232, 232);
+    }
+
+    .buttons{
+        width: 120px;
+        height: 35px;
+        margin-top: auto;
+        margin-bottom: auto;
+        color: white;
+        font-size: 17px;
+        background-color: #4e6ef2;
+    }
+
+    .searchbox{
+        height: 30px;
+        width: 500px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .content{
+        font-size: 10px;
+        color: gray;
+    }
+
+    .title{
+        font-size: 18px;
+        
+    }
+
+    .paginaton a{
+        display: inline-block;
+        padding-right: 20px;
+        border: 1px;
+        width: 40px;
+        height: 30px;
+        background-color:white;
+    }
+
+
+</style>
+<body>
+    <div class = "header">
+        <img src="/download.jpg" width="140" onclick="window.location.href='dadsdasdasda.html'">
+        <input type="text" class="searchbox" oninput="onInput(event)">
+        <button onclick="urFunction()" class="buttons">白度一下</button>
+    </div>
+
+        <div id="results">
+            <div class="result">
+                <a href="https://moonshotacademy.cn/" class="title">探月学院</a>
+                <p class="content">
+                    探月学院自主研发兼顾中国特色和海外大学录取的双语课程体系:以美国高中课程标准(CCSS\NGSS\C3)为主轴,结合中国新课标学科核心素养,参考IB\A-Level等国际课程课程体系。
+                </p>
+                <p class="ref">https://moonshotacademy.cn/</p>
+            </div>
+        </div>
+
+        <div class="paginaton">
+            <a id="button1" onclick="news0123()">1</a>
+            <a id="button2" onclick="news4567()">2</a>
+            <a id="button3" onclick="news8910()">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">下一页</a>
+
+
+
+
+        </div>
+
+
+
+        <script>
+            var data = [
+                {
+                    title: "探月学院",
+                    content:
+                        "探月学院自主研发兼顾中国特色和海外大学录取的双语课程体系:以美国高中课程标准(CCSS\\NGSS\\C3)为主轴,结合中国新课标学科核心素养,参考IB\A-Level等国际课程课程体系...",
+                    ref: "www.moonshotacademy.cn/learning/",
+                },
+                {
+                    title: "探月学院「官网」 | 培养内心丰盈的个体 积极行动的公民",
+                    content:
+                        "探月学院是推动中国和全球教育生态进化的创新平台,在探月学院旗下有面向学生的「高中段创新教育项目」也有面向教师的培训项目「教育生态变革学院」。",
+                    ref: "moonshotacademy.cn",
+                },
+                {
+                    title: "在探月学院工作是一种怎样的体验? - 知乎",
+                    content:
+                        "48 人赞同了该回答 作为探月学院的早期员工,算是亲眼见证了探月从0到1的过程,简单分享下我心中的探月是什么样的,主要看图。(多图预警) 被探月吸引的人,都对教育有着近乎偏...",
+                    ref: "https://www.zhihu.com/question/296287503/answer/500077592",
+                },
+                {
+                    title: "北京校区 | 探月学院",
+                    content:
+                        "北京学院是探月学院所创办的第一个线下实体学校,它位于四朝古都、全球化大都市北京,它将承担起早期探索和学校模型设计的重任。目前北京学院拥有 80 多名教职员工和 70 多...",
+                    ref: "https://moonshotacademy.cn/campus/",
+                },
+                {
+                    title: "探月学院 | 全新的中国教育空间探索_项目名称",
+                    content:
+                        "探月学院(Moonshot Academy)自2017年成立以来得到教育界极大关注。探月学院基于中国学生发展核心素养以及普通高中新课程标准,为学习者提供指向核心素养的双语课程。 这套课...",
+                    ref: "https://www.sohu.com/a/442279477_494598",
+                },
+                {
+                    title: "王熙乔:他和探月学院正在重新勾勒学校的模样",
+                    content:
+                        "看点:出现在镜头中的王熙乔,一如以往在媒体报道以及各种论坛中的他:瘦削,有着与年龄严重不符的理性和知识储备。谈到他所创建的探月学院,眼中会闪着光芒;谈到他在学业方面的..",
+                    ref: "https://www.sohu.com/a/243181621_484992",
+                },
+                {
+                    title: "探月学院 · 简介",
+                    content:
+                        "7:00,通常是你的起床时间,在学生公寓洗漱好吃完早餐后,乘坐学校安排的巴士到探月学院的学习空间开始一天的学习。 8:00 - 10:00,这个时间段是一节深度学习课程的固定课位,你...",
+                    ref: "http://www.360doc.com/content/18/0609/12/56262950_760916799.shtml",
+                },
+                {
+                    title: "如何看待一年15万学费的探月学院？",
+                    content:
+                        "本人就是探月学院的创始届学生,不匿名,就刚。 我把回答全看完了,比较赞同的是2019.11.30的一个回答,2020.8.17的一个回答,以及最新的10.18号的那个回答(挺潮的,确实形象hhh)...",
+                    ref: "https://www.zhihu.com/question/270260555",
+                },
+                {
+                    title: "【探月学院招聘】-猎聘",
+                    content:
+                        "探月学院 关注 已关注屏蔽该公司取消屏蔽教育培训·50-99人·私营/民营企业教育培训 学前教育 弹性工作 定期体检 扁平管理 五险一金 工作时间和福利信息由企业提供,...",
+                    ref: "https://www.liepin.com/company/9367359/",
+                },
+                {
+                    title: "探月学院：一次教育与自我的进化",
+                    content:
+                        " 11月底和同学去参访了北京创新教育的一个新项目:探月学院,由于各种原因,一直到今天才坐下来把相关信息整理出来。 探访探月学院 通过此次参观,希望以探月学院为切入点,能对...",
+                    ref: "https://www.jianshu.com/p/ee612a26c32b",
+                },
+                {
+                    title: "探月学院官宣-原创-完整版视频在线观看-爱奇艺",
+                    content:
+                        "探月学院官宣,是原创类高清视频,于2017-11-17上映。视频主要内容:探月学院官宣。",
+                    ref: "https://www.iqiyi.com/w_19rv3mstfd.html",
+                },
+            
+            ];
+
+
+
+            // var results = "";
+            // var element0 = data[0];
+            // results += 
+            //     <div class="result">
+            //         <a href="${element0.ref}" class="title">${element0.title}</a>
+            //         <p class="content">${element0.content}</p>
+            //         <p class="ref" >${element0.ref}</p>
+            //     </div>
+            // var element1 = data[1];
+            // results +=
+            //     <div class="result">
+            //         <a href="${element1.ref}" class="title">${element1.title}</a>
+            //         <p class="content">${element1.content}</p>
+            //         <p class="ref" >${element1.ref}</p>
+            //     </div>
+            // document.getElementById("results").innerHTML = results;
+
+        news0123();
+
+        function news0123(){
+            var results ="";
+            for (let index = 0; index < 4; index++) {
+                const element = data[index];
+                results +=`
+                    <div class="result">
+                    <a href="${element.ref}" class="title">${element.title}</a>
+                    <p class="content">${element.content}</p>
+                    <p class="ref" >${element.ref}</p>
+                </div>
+                `;
+            }
+            document.getElementById("results").innerHTML = results;
+        }
+
+        function news4567(){
+            var results ="";
+            for (let index = 4; index < 8; index++) {
+                const element = data[index];
+                results +=`
+                <div class="result">
+                <a href="${element.ref}" class="title">${element.title}</a>
+                <p class="content">${element.content}</p>
+                <p class="ref" >${element.ref}</p>
+                </div>
+                `;
+            }
+                document.getElementById("results").innerHTML = results;
+        }
+        function news8910(){
+            var results ="";
+            for (let index = 9; index < 11; index++) {
+                const element = data[index];
+                results +=`
+                <div class="result">
+                <a href="${element.ref}" class="title">${element.title}</a>
+                <p class="content">${element.content}</p>
+                <p class="ref" >${element.ref}</p>
+                </div>
+                `;
+            }
+        document.getElementById("results").innerHTML = results;
+        }
+        </script>
+        
+ </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style> 
+        span {
+            color: red;
+        }
+      
+        .nav{
+            background-color: white;
+            width: 300px;
+            display: flex;   
+        }
+        .nav-item{
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .main{
+            color: green;
+        }
+
+
+        .logo{
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            
+        }
+        .search{
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            width: 500px;
+        }
+        
+        .buttons{
+            background-color: rgb(red, green, blue);
+            width: 200px;
+        }
+
+        .wenzhang pic{
+            display: flex
+        }
+
+        .content{
+            justify-content: space-between;
+            display: flex;
+
+        }
+        .auto-complete .suggest-list{
+            border: 2px;
+            border-color: black;
+            border-style: solid;
+            width: 300px;
+            transform: translateX(340px);
+        }
+    </style>
+    <body>
+
+        <!-- <button onmousemove="alert('wtf?');">awwsl</button> -->
+        
+        <div class="nav">
+            <div class="nav-item"><a href="http://news.baidu.com">新闻</a></div>
+            <div class="nav-item"><a href="http://news.baidu.com">好123</a></div>
+            <div class="nav-item"><a href="http://news.baidu.com">新闻</a></div>
+            <div class="nav-item"><a href="http://jauwgdjagd.com">地图</a></div>
+        </div>
+
+        <div class = "logo">
+            <img src="/download.jpg" width="200">
+        </div>
+
+        <div class="search">
+            <input type="text" class="search box" oninput="onInput(event)">
+            <button onclick="urFunction()" class="buttons" onclick="window.location.href='resultpage.html'">白度一下</button>
+        </div>
+
+        <div id="auto-complete-box" class="auto-complete" style="visibility: hidden;">
+            <ul id="auto-complete-list" class="suggest-list">
+                
+                <li>is MSA-hanxi a retard ?</li>
+                <li>is MSA-hanxi stupid ?</li>
+                <li>is MSA-hanxi a asshole ?</li>
+            </ul>
+        </div>
+
+
+        
+        <div class="content">
+            <div style="display: flex;">
+                <div class="zuo">
+                    <h2>两会国是厅∣开好人民期待的“春天盛会”</h2>
+                    <div class="wenzhang pic">
+                        <img src="/9q4702790834798.png" width="100px">
+                        
+                        <img src="/9q4702790834798.png" width="100px">
+                        
+                        
+                        <div></div><p>中国日报网03-04 12:52</p>
+                        
+                        
+                        <h2>我国载人航天工程空间站在轨建造任务稳步推进</h2>
+                        <p>北京日报客户端03-04 08:14</p>
+                    </div>
+                    
+                </div>
+            </div>
+                
+            <div class="you">
+                    <ol style="width: 400px;">
+                        <li>
+                            <div style="display: flex;justify-content: space-between;">
+                                <div class="left">西方倒行逆施阻挡不了中国前进</div>
+                                <div class="right">114514万</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex;justify-content: space-between;">
+                                <div class="left">31省份新增确诊9例 均为境外输入</div>
+                                <div class="right">114514万</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex;justify-content: space-between;">
+                                <div class="left">百度回港上市</div>
+                                <div class="right">114514万</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex;justify-content: space-between;">
+                                <div class="left">民日报评校内减负校外增负</div>
+                                <div class="right">114514万</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="display: flex;justify-content: space-between;">
+                                <div class="left">白宫:希望与中国加强直接对话</div>
+                                <div class="right">114514万</div>
+                            </div>
+                        </li>
+                    </ol>
+                
+            </div>
+        </div>    
+            <script>
+                function onInput(event) {
+                    var value = event.srcElement.value;
+                    var innerHTML = "";
+                    if(value){
+                        document.getElementById("auto-complete-box").style.visibility = "visible";
+
+                    }else {
+                        document.getElementById("auto-complete-box").style.visibility = "hidden";
+                    }                        innerHTML += '<li class="suggest-item">' + value + "是什么" + "</li>";
+                    innerHTML += '<li class="suggest-item">' + value + "怎么学" + "</li>";
+                    innerHTML += '<li class="suggest-item">' + value + "能干什么" + "</li>";
+                    document.getElementById("auto-complete-list").innerHTML = innerHTML;
+                }
+                        
+            </script>        
+        </body>
+        </html>
+
+
+        
+        
+        
+        <!-- 
+                    <h2>两会国是厅∣开好人民期待的“春天盛会”</h2>
+                    <div class="wenzhang pic">
+                        <img src="/9q4702790834798.png" width="100px">
+                    
+                        <img src="/9q4702790834798.png" width="100px">
+                
+                    
+                <div></div><p>中国日报网03-04 12:52</p>
+                
+                    
+                    <h2>我国载人航天工程空间站在轨建造任务稳步推进</h2>
+                    <p>北京日报客户端03-04 08:14</p> -->
+        
+                    <!-- <script type="text/javascript">
+                    // alert ('wtfffffffffffffffffq?');
+                    // document.write("write");
+                    </script> -->
